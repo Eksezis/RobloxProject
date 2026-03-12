@@ -55,3 +55,4 @@ if player.Character then
 end
 
 player.CharacterAdded:Connect(setupCharacter)
+--kevin
