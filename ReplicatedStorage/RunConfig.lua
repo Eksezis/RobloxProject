@@ -8,8 +8,8 @@ print("RunConfig module loaded")
 -- \\ SETTINGS \\
 
 RunConfig.WalkSpeed = game.StarterPlayer.CharacterWalkSpeed
-RunConfig.RunSpeed = 20 -- Speed while runninh
-RunConfig.SprintSpeed = 25 -- Speed while sprinting
+RunConfig.RunSpeed = 25 -- Speed while running
+RunConfig.SprintSpeed = 32.67 -- Speed while sprinting
 
 RunConfig.WalkFov = workspace.Camera.FieldOfView
 RunConfig.RunFov = 80 -- Camera FieldOfView while running
@@ -66,6 +66,8 @@ RunConfig.ChangeAnimationProirity = true -- Turn this off if your animations are
 RunConfig.Walking = false
 RunConfig.Running = false
 RunConfig.Sprinting = false
+RunConfig.Crouching = false
+RunConfig.Sliding = false
 
 print("RunConfig settings loaded:")
 print("CanRun:", RunConfig.CanRun)
