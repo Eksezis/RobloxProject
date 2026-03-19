@@ -17,11 +17,13 @@ local runService = game:GetService("RunService")
 
 local runAnimation = Instance.new("Animation")
 runAnimation.Name = "RunAnimation"
-runAnimation.AnimationId = RunConfig.RunAnimationId
+--runAnimation.AnimationId = RunConfig.RunAnimationId
+runAnimation.AnimationId = "rbxassetid://616015216"
 
 local sprintAnimation = Instance.new("Animation")
 sprintAnimation.Name = "SprintAnimation"
-sprintAnimation.AnimationId = RunConfig.SprintAnimationId
+--sprintAnimation.AnimationId = RunConfig.SprintAnimationId
+sprintAnimation.AnimationId = "rbxassetid://616017286"
 local runTrack = animator:LoadAnimation(runAnimation)
 local sprintTrack = animator:LoadAnimation(sprintAnimation)
 
@@ -87,15 +89,6 @@ UIS.InputEnded:Connect(function(input)
 		Walk()
 	end
 end)
-
-mobileGui.RunButton.MouseButton1Down:Connect(function()
-	Run()
-end)
-
-mobileGui.RunButton.MouseButton1Up:Connect(function()
-	Walk()
-end)
-
 
 runService.RenderStepped:Connect(function()
 	if humanoid.MoveDirection.Magnitude > 0 then
