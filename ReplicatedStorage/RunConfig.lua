@@ -7,6 +7,7 @@ print("RunConfig module loaded")
 
 -- \\ SETTINGS \\
 
+RunConfig.BaseWalkSpeed = 16
 RunConfig.WalkSpeed = game.StarterPlayer.CharacterWalkSpeed
 RunConfig.RunSpeed = 25 -- Speed while running
 RunConfig.SprintSpeed = 32.67 -- Speed while sprinting
@@ -22,9 +23,9 @@ RunConfig.RunKey = Enum.KeyCode.LeftShift -- The key to press to run
 RunConfig.TransitionSpeed = 0.5 -- Time it takes to go from walking to running
 RunConfig.SprintTransitionSpeed = 3 -- Time it takes before you start sprinting
 
-RunConfig.RunAnimationId = "rbxassetid://" -- EXAMPLE: "rbxassetid://1234567890"
+RunConfig.RunAnimationId = "rbxassetid://1234567890" -- EXAMPLE: "rbxassetid://1234567890"
 -- RunConfig.SprintAnimationId = "rbxassetid://132238923550570" -- Your custom sprint animation (ID seems incorrect)
-RunConfig.SprintAnimationId = "rbxassetid://2515093838" -- Known working R6 sprint animation for testing
+RunConfig.SprintAnimationId = "rbxassetid://1773420659" -- Known working R6 sprint animation for testing
 
 -- Animation from BestRunAnimR6 Sprint model (KeyframeSequences cannot be used at runtime)
 -- RunConfig.SprintAnimationInstance = game.ReplicatedStorage.SprintAnimation
@@ -68,6 +69,7 @@ RunConfig.Running = false
 RunConfig.Sprinting = false
 RunConfig.Crouching = false
 RunConfig.Sliding = false
+RunConfig.WallRunning = false
 
 print("RunConfig settings loaded:")
 print("CanRun:", RunConfig.CanRun)
