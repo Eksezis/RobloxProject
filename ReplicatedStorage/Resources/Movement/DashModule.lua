@@ -4,7 +4,6 @@ local DashModule = {}
 local Resources = game.ReplicatedStorage.Resources
 local UIS = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
-local RunConfig = require(game.ReplicatedStorage.RunConfig)
 
 local dashCD = false
 local dashTime = 3
@@ -18,12 +17,6 @@ function DashModule:init()
 	UIS.InputBegan:Connect(function(i,e)
 		if e then return end
 		if i.KeyCode == Enum.KeyCode.Q and dashCD == false then
-
-			-- blokada dasha podczas kucania, slajdu, biegu, sprintu
-			if RunConfig.Crouching then return end
-			if RunConfig.Sliding then return end
-			if RunConfig.Running then return end
-			if RunConfig.Sprinting then return end
 
 			dashCD = true
 			task.delay(dashTime,function()
